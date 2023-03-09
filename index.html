@@ -18,6 +18,12 @@
     <div class="button-container">
       <button class="btn">Click here</button>
     </div>
+    <div class="button-container">
+      <audio controls>
+        <source src="assets/birthday.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+    
   </div>
   <div class="popup">
     <b class="close">x</b>
@@ -50,6 +56,7 @@
       </div>
     </div>
   </div>
+ 
   <section>
 
   </section>
@@ -61,17 +68,22 @@
     let close = document.querySelector('.close');
     let popper = document.querySelector('#my-canvas');
     let card = document.querySelector('.birthdayCard');
-
+    let audio = document.querySelector('audio')
+    
+ 
     btn.onclick = function () {
       popup.classList.add('active');
       popper.classList.add('active');
       card.classList.add('active');
+      audio.play();
+      audio.loop = true;
     }
     close.onclick = function () {
       popup.classList.remove('active');
       popper.classList.remove('active');
       card.classList.remove('active');
-    }
+      audio.pause()
+           }
     var confettiSettings = { target: 'my-canvas', size: '2.8', clock: '50' };
     var confetti = new ConfettiGenerator(confettiSettings);
     confetti.render();

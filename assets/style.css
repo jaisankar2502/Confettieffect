@@ -364,3 +364,6 @@ p {
 .name {
   margin-left:150px;
 }
+audio{
+  display: none;
+}
