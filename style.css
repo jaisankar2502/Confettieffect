@@ -35,7 +35,7 @@ section p{
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  width: 450px;
+  width: 350px;
   height: 300px;
   box-shadow: 0 25px 50px (0,0,0,0.1),
   0 0 0 1000px (255,255,255,0.95);
@@ -100,7 +100,7 @@ img{
 
 h2 {
 	margin-top: 25%;
-	font-size: 100px;
+	font-size: 2vw;
 	color: white;
 	text-shadow: 0px 0px 8px white;
 	justify-content: center;
@@ -111,7 +111,7 @@ h2 {
 
 h1 {
 	color: white;
-	font-size: 90px;
+	font-size: 5vw;
 	text-shadow: 0px 0px 8px white;
 	justify-content: center;
 	font-weight: bold;
@@ -129,16 +129,18 @@ h1 {
 /* birthday card */
 .birthdayCard {
   position: relative;
-  width: 250px;
-  height:350px;
+  width: -2vw;
+  height:-2vw;
   cursor: pointer;
   transform-style: preserve-3d;
   transform: perspective(2500px);
   transition: 4s;
+  display: none;
   visibility: hidden; 
 }
 .birthdayCard.active{
   visibility: visible;
+  display: inline-block;
 }
 
 .birthdayCard:hover {
