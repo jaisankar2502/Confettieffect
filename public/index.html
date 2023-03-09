@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>/assets/style.css
+
+<body>
+  <canvas id="my-canvas"></canvas>
+  <canvas id="screen"></canvas>
+  <div class="cracker">
+    <h1>Happy birthday,</h1>
+    <h1>Nooh</h1>
+    <div class="button-container">
+      <button class="btn">Click here</button>
+    </div>
+  </div>
+  <div class="popup">
+    <b class="close">x</b>
+    <div class="birthdayCard">
+      <div class="cardFront">
+        <div class="front-text">
+          <h3 class="happy">HAPPY</h3>
+          <h3 class="bday">BIRTHDAY</h2>
+          <h3 class="toyou">to you!</h3>
+        </div>
+        <div class="wrap-deco">
+          <div class="decorations"></div>
+          <div class="decorationsTwo"></div>
+        </div>
+        <div class="wrap-decoTwo">
+          <div class="decorations"></div>
+          <div class="decorationsThree"></div>
+        </div>
+        <div class="plate">
+          <div class="cake"></div>
+          <div class="flame"></div>
+        </div>
+      </div>
+      <div class="cardInside">
+        <div class="wishes">
+          <p>Dear Nooh,</p>
+          <p>Happy birthday!! I hope your day is filled with lots of love and laughter! May all of your birthday wishes
+            come true.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section>
+
+  </section>
+  <script src="/assets/cracker.js"></script>
+  <script src="/assets/index.min.js"></script>
+  <script>
+    let btn = document.querySelector('.btn');
+    let popup = document.querySelector('.popup');
+    let close = document.querySelector('.close');
+    let popper = document.querySelector('#my-canvas');
+    let card = document.querySelector('.birthdayCard');
+
+    btn.onclick = function () {
+      popup.classList.add('active');
+      popper.classList.add('active');
+      card.classList.add('active');
+    }
+    close.onclick = function () {
+      popup.classList.remove('active');
+      popper.classList.remove('active');
+      card.classList.remove('active');
+    }
+    var confettiSettings = { target: 'my-canvas', size: '2.8', clock: '50' };
+    var confetti = new ConfettiGenerator(confettiSettings);
+    confetti.render();
+
+  </script>
+
+</body>
+
+</html>
